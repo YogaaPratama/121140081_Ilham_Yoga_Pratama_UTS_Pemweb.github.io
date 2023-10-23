@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles_tabel.css">
+    <title>Halaman Tabel</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo_ilham.jpg" alt="Logo" width="40" height="36">
+        </div>
+        <h1>ILHAM WEBSITE</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="utama.html">Halaman Utama</a></li>
+            <li><a href="form.html">Halaman Formulir</a></li>
+            <li><a href="table.html">Halaman Tabel</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Daftar Mahasiswa</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>NIM</th>
+                    <th>Program Studi</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Tanggal Lahir</th>
+                    <th>Alamat</th>
+                </tr>
+            </thead>
+            <tbody id="dataMahasiswa">
+                <!-- Data dummy -->
+                <tr>
+                    <td>Daffa</td>
+                    <td>12345678</td>
+                    <td>Teknik Informatika</td>
+                    <td>daffa@example.com</td>
+                    <td>********</td>
+                    <td>Laki-laki</td>
+                    <td>1995-06-15</td>
+                    <td>Jl. Contoh No. 123</td>
+                </tr>
+                <tr>
+                    <td>Budi</td>
+                    <td>87654321</td>
+                    <td>Teknik Pertambangan</td>
+                    <td>budi@example.com</td>
+                    <td>********</td>
+                    <td>Perempuan</td>
+                    <td>1998-03-25</td>
+                    <td>Jl. Dummy No. 456</td>
+                </tr>
+                <tr>
+                    <td>Bobi</td>
+                    <td>23456789</td>
+                    <td>Teknik Mesin</td>
+                    <td>bobi@example.com</td>
+                    <td>********</td>
+                    <td>Laki-laki</td>
+                    <td>1997-09-10</td>
+                    <td>Jl. Test No. 789</td>
+                </tr>
+                <tr>
+                    <td>Fadil</td>
+                    <td>98765432</td>
+                    <td>Teknik Sipil</td>
+                    <td>fadil@example.com</td>
+                    <td>********</td>
+                    <td>Perempuan</td>
+                    <td>1996-12-08</td>
+                    <td>Jl. Dummy No. 789</td>
+                </tr>
+                <tr>
+                    <td>David</td>
+                    <td>34567890</td>
+                    <td>Farmasi</td>
+                    <td>david@example.com</td>
+                    <td>********</td>
+                    <td>Laki-laki</td>
+                    <td>1999-02-20</td>
+                    <td>Jl. Contoh No. 456</td>
+                </tr>
+                <tr>
+                    <td>Sarah</td>
+                    <td>09876543</td>
+                    <td>Fisika</td>
+                    <td>sarah@example.com</td>
+                    <td>********</td>
+                    <td>Perempuan</td>
+                    <td>1994-11-05</td>
+                    <td>Jl. Test No. 123</td>
+                </tr>
+                <tr>
+                    <td>Nita</td>
+                    <td>45678901</td>
+                    <td>Biologi</td>
+                    <td>nita@example.com</td>
+                    <td>********</td>
+                    <td>Laki-laki</td>
+                    <td>1998-07-30</td>
+                    <td>Jl. Dummy No. 123</td>
+                </tr>
+                <tr>
+                    <td>Laura</td>
+                    <td>10987654</td>
+                    <td>Biosistem</td>
+                    <td>laura@example.com</td>
+                    <td>********</td>
+                    <td>Perempuan</td>
+                    <td>1995-04-18</td>
+                    <td>Jl. Contoh No. 789</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; 2023 Ilham Yoga Pratama</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var queryString = window.location.search.substring(1); // Mendapatkan query string tanpa tanda tanya (?)
+            var dataMahasiswa = document.getElementById("dataMahasiswa");
+    
+            if (queryString) {
+                var params = new URLSearchParams(queryString);
+    
+                // Mengambil data dari query string
+                var nama = params.get("nama");
+                var nim = params.get("nim");
+                var prodi = params.get("prodi");
+                var email = params.get("email");
+                var password = params.get("password");
+                var gender = params.get("gender");
+                var tgl_lahir = params.get("tgl_lahir");
+                var alamat = params.get("alamat");
+    
+                // Membuat baris baru dalam tabel dan menambahkan data
+                var row = dataMahasiswa.insertRow(-1);
+                var cells = [nama, nim, prodi, email, password, gender, tgl_lahir, alamat];
+    
+                for (var i = 0; i < cells.length; i++) {
+                    var cell = row.insertCell(i);
+                    cell.textContent = cells[i];
+                }
+            }
+        });
+    </script>
+</body>
+</html>

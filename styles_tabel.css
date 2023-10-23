@@ -1,0 +1,85 @@
+/* CSS untuk halaman tabel (table.html) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ED7D31;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 100px;
+}
+
+header {
+    background-color: #333;
+    color: #ED7D31;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+.logo {
+    float: left;
+    margin: 10px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #333;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ED7D31;
+}
+
+main {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #6f6d6d;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
