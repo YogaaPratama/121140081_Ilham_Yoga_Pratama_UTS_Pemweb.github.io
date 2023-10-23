@@ -137,13 +137,13 @@
                 var prodi = params.get("prodi");
                 var email = params.get("email");
                 var password = params.get("password");
-                var gender = params.get("gender");
-                var tgl_lahir = params.get("tgl_lahir");
+                var jenis_kelamin = params.get("jenis_kelamin");
+                var tanggal_lahir = params.get("tanggal_lahir");
                 var alamat = params.get("alamat");
     
                 // Membuat baris baru dalam tabel dan menambahkan data
                 var row = dataMahasiswa.insertRow(-1);
-                var cells = [nama, nim, prodi, email, password, gender, tgl_lahir, alamat];
+                var cells = [nama, nim, prodi, email, password, jenis_kelamin, tanggal_lahir, alamat];
     
                 for (var i = 0; i < cells.length; i++) {
                     var cell = row.insertCell(i);
